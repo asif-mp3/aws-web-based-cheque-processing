@@ -1,62 +1,87 @@
 # ChequeCloud - Web-Based Cheque Processing using AWS
 
-## Project Overview
+:warning: **This service is currently in production.**
 
-ChequeCloud is a cloud-based web application designed to automate and streamline cheque processing by utilizing AWS services and cutting-edge OCR technology. The project aims to reduce manual effort, increase accuracy, and provide a scalable platform for managing financial documents securely. The solution includes features like fraud detection and data encryption to ensure secure and reliable cheque handling.
+ChequeCloud is a cloud-based web application designed to automate cheque processing and verification using AWS services. By leveraging cutting-edge OCR technology and a scalable cloud infrastructure, this service enhances accuracy, efficiency, and security in cheque handling. It provides a comprehensive solution for managing financial documents with fraud detection and secure data handling.
 
-## Features
-- **Automated Cheque Processing**: Uses AWS Textract to perform OCR on cheque images and extract necessary information.
-- **Fraud Detection**: Leverages machine learning (AWS SageMaker) to identify fake or forged cheques.
-- **Secure Data Handling**: Ensures data protection with AWS KMS (Key Management Service) for encryption.
-- **Scalable Cloud Infrastructure**: Built using various AWS services including Lambda, RDS, and S3.
+## Key Features
 
-## Architecture
+- **Automated Cheque Processing**: Utilizes **Amazon Textract** to perform Optical Character Recognition (OCR) on cheque images, extracting necessary information such as cheque number, amount, and bank details.
+- **Fraud Detection**: Leverages **AWS SageMaker** machine learning models to detect fake or forged cheques.
+- **Secure Data Handling**: Implements **AWS KMS** for encryption and secure storage of sensitive data, ensuring high levels of data protection.
+- **Real-time API Integration**: Integrates with APIs to ensure seamless communication between frontend and backend, providing real-time updates on cheque processing.
+- **Scalability**: Built using AWS serverless architecture, ensuring scalability and reliability for growing workloads.
 
-The architecture consists of five main components:
-1. **Frontend (Web Development)**: Built with React.js for an interactive user interface that allows cheque submission and results display.
-2. **API Layer**: Facilitates communication between the frontend and backend using AWS Lambda and API Gateway.
-3. **Machine Learning (Backend)**: AWS SageMaker is used to develop and deploy ML models that perform OCR and fraud detection on cheque images.
-4. **Database Management**: AWS RDS is responsible for storing cheque data and user information in a structured manner.
-5. **Data Encryption**: AWS KMS ensures all sensitive data is encrypted, maintaining a high level of security.
+## Technology Stack
 
-![Architecture Diagram](path/to/architecture.png)
+- **Frontend**:
+  - **Languages**: React.js, Bootstrap
+  - **Key Features**: Responsive design, user-friendly cheque submission interface, real-time results display
+- **Backend**:
+  - **Languages/Frameworks**: Python, AWS Lambda
+  - **Key Features**: RESTful APIs, machine learning integration, fraud detection logic
+- **Database**:
+  - **Type**: Amazon RDS (MySQL)
+  - **Purpose**: Stores cheque data, user information, and metadata for processing
+- **OCR Processing**:
+  - **Service**: Amazon Textract
+  - **Function**: Extracts key information from cheque images for further processing
+- **Machine Learning**:
+  - **Platform**: AWS SageMaker
+  - **Purpose**: Detects fraudulent cheques through trained machine learning models
+  - **Libraries**: TensorFlow, Scikit-learn for model training and deployment
+- **Security**:
+  - **Service**: AWS KMS (Key Management Service)
+  - **Purpose**: Ensures encryption and security of sensitive data during processing and storage
+- **Hosting**:
+  - **Platform**: AWS Lambda, S3, and CloudWatch for performance monitoring and scalability
 
-## Services Used
-- **Amazon S3**: Object storage for storing cheque images.
-- **Amazon Textract**: OCR service for extracting text from cheque images.
-- **Amazon RDS**: Relational database service for storing and managing structured data.
-- **AWS SageMaker**: Machine learning service for building and deploying models.
-- **AWS Lambda**: Serverless computing for handling API requests and responses.
-- **AWS KMS**: Key Management Service for encrypting sensitive data.
-- **Amazon CloudWatch**: For performance monitoring and logging.
+## Additional Features
+
+- **Fraud Detection**: Machine learning models actively detect potential forgery or fraud in submitted cheques.
+- **Data Encryption**: Encryption services through AWS KMS ensure that all sensitive information is securely handled and protected.
+- **Real-time Processing**: Cheques are processed and verified in real-time, offering immediate feedback to users.
+
+## System Architecture
+
+The architecture of ChequeCloud consists of several core components:
+1. **Frontend**: A React.js interface allowing users to upload and submit cheque images for processing.
+2. **API Gateway**: Facilitates communication between frontend and backend, processing user requests through AWS Lambda functions.
+3. **Machine Learning Backend**: Cheque images are analyzed using ML models in **AWS SageMaker**, detecting any anomalies or fraudulent behavior.
+4. **Database (Amazon RDS)**: All cheque and user data are stored and managed in a secure MySQL instance.
+5. **Security**: The entire system is secured using **AWS KMS** for encryption, ensuring all data is handled with industry-standard security protocols.
+
+![Architecture Diagram](path/to/architecture-diagram.png)
 
 ## Step-by-Step Integration
 
-### 1. Frontend Development
-- Use **React.js** to design a user-friendly web interface.
-- Integrate **Bootstrap** for styling and responsiveness.
-- Allow users to upload cheque images for processing.
+1. **Frontend Development**:
+   - Use **React.js** for developing the user interface.
+   - Implement **Bootstrap** for responsive design to make the web app mobile-friendly.
+   - Allow users to upload cheque images for verification.
+   
+2. **Backend (API Layer)**:
+   - Set up **AWS Lambda** to handle API requests and connect with other AWS services.
+   - Use **Amazon API Gateway** for routing user requests to appropriate backend processes.
 
-### 2. API Layer
-- Set up **AWS Lambda** functions to handle API requests and connect with other services.
-- Create an API using **Amazon API Gateway** to facilitate communication between frontend and backend.
+3. **OCR and Machine Learning**:
+   - Integrate **Amazon Textract** for OCR processing of cheque images.
+   - Train fraud detection models using **AWS SageMaker** and deploy them to the production environment.
 
-### 3. Machine Learning
-- Train an OCR model using **AWS SageMaker** to extract cheque details.
-- Build a fraud detection model using deep learning libraries such as **TensorFlow**.
+4. **Database Management**:
+   - Set up **Amazon RDS (MySQL)** to store processed cheque data and user information.
+   - Manage database backups and security protocols.
 
-### 4. Database Management
-- Use **Amazon RDS** to store cheque data and maintain records of processing results.
-- Implement backup strategies and performance monitoring.
+5. **Data Encryption**:
+   - Implement **AWS KMS** for encryption of sensitive user data and cheque details.
+   - Ensure that all communication between services is encrypted and secure.
 
-### 5. Data Encryption and Security
-- Integrate **AWS KMS** for managing encryption keys.
-- Implement user authentication and authorization using **AWS IAM** (Identity and Access Management).
-
-### 6. Monitoring and Logging
-- Set up **Amazon CloudWatch** to monitor the performance of the web app and log system events for debugging.
+6. **Monitoring and Security**:
+   - Use **Amazon CloudWatch** for real-time monitoring and logging of system performance.
+   - Configure access control using **AWS IAM** to manage user permissions.
 
 ## How to Run the Project Locally
-1. Clone the repository from GitHub:
+
+1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/ChequeCloud.git
