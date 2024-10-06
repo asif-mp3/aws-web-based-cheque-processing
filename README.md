@@ -11,6 +11,7 @@ ChequeCloud is a cloud-based web application designed to automate cheque process
 - **Secure Data Handling**: Implements **AWS KMS** for encryption and secure storage of sensitive data, ensuring high levels of data protection.
 - **Real-time API Integration**: Integrates with APIs to ensure seamless communication between frontend and backend, providing real-time updates on cheque processing.
 - **Scalability**: Built using AWS serverless architecture, ensuring scalability and reliability for growing workloads.
+- **Monitoring and Performance**: **Amazon CloudWatch** tracks application performance and system metrics to ensure reliability and detect anomalies in cheque processing workflows.
 
 ## Technology Stack
 
@@ -33,6 +34,9 @@ ChequeCloud is a cloud-based web application designed to automate cheque process
 - **Security**:
   - **Service**: AWS KMS (Key Management Service)
   - **Purpose**: Ensures encryption and security of sensitive data during processing and storage
+- **Monitoring**:
+  - **Service**: Amazon CloudWatch
+  - **Purpose**: Tracks application metrics, monitors performance, and logs key events for troubleshooting and optimization.
 - **Hosting**:
   - **Platform**: AWS Lambda, S3, and CloudWatch for performance monitoring and scalability
 
@@ -41,6 +45,7 @@ ChequeCloud is a cloud-based web application designed to automate cheque process
 - **Fraud Detection**: Machine learning models actively detect potential forgery or fraud in submitted cheques.
 - **Data Encryption**: Encryption services through AWS KMS ensure that all sensitive information is securely handled and protected.
 - **Real-time Processing**: Cheques are processed and verified in real-time, offering immediate feedback to users.
+- **System Monitoring**: **Amazon CloudWatch** logs performance metrics, monitors errors, and provides real-time insights to ensure application reliability.
 
 ## System Architecture
 
@@ -50,6 +55,7 @@ The architecture of ChequeCloud consists of several core components:
 3. **Machine Learning Backend**: Cheque images are analyzed using ML models in **AWS SageMaker**, detecting any anomalies or fraudulent behavior.
 4. **Database (Amazon RDS)**: All cheque and user data are stored and managed in a secure MySQL instance.
 5. **Security**: The entire system is secured using **AWS KMS** for encryption, ensuring all data is handled with industry-standard security protocols.
+6. **Monitoring**: **Amazon CloudWatch** logs and tracks performance to ensure the application runs smoothly and detects any issues in real-time.
 
 ![Architecture Diagram](path/to/architecture-diagram.png)
 
