@@ -47,13 +47,6 @@ ChequeCloud is a cloud-based web application designed to automate cheque process
 - **Hosting**:
   - **Platform**: AWS Lambda, S3, CloudWatch, and **Amazon EC2** for scalable compute resources
 
-## Additional Features
-
-- **Fraud Detection**: Machine learning models actively detect potential forgery or fraud in submitted cheques.
-- **Data Encryption**: Encryption services through AWS KMS ensure that all sensitive information is securely handled and protected.
-- **Real-time Processing**: Cheques are processed and verified in real-time, offering immediate feedback to users.
-- **System Monitoring**: **Amazon CloudWatch** logs performance metrics, monitors errors, and provides real-time insights to ensure application reliability.
-
 ## System Architecture
 
 The architecture of ChequeCloud consists of several core components:
@@ -105,12 +98,18 @@ The architecture of ChequeCloud consists of several core components:
    - **AWS IAM** (Identity and Access Management) ensures that only authorized users can access the system’s functionalities.
    - Users are required to log in before uploading cheques, and access permissions are managed to secure sensitive data and processing workflows.
 
-  
+## Additional Features
+
+- **Fraud Detection**: Machine learning models actively detect potential forgery or fraud in submitted cheques.
+- **Data Encryption**: Encryption services through AWS KMS ensure that all sensitive information is securely handled and protected.
+- **Real-time Processing**: Cheques are processed and verified in real-time, offering immediate feedback to users.
+- **System Monitoring**: **Amazon CloudWatch** logs performance metrics, monitors errors, and provides real-time insights to ensure application reliability.
+
 ## TODOs:
 
 - [ ] **Optimize Fraud Detection Models**: Improve the fraud detection algorithms using advanced machine learning techniques.
 - [ ] **Implement User Authentication**: Add authentication via **AWS Cognito** for secure user login and account management.
-- [ ] **Enhance Frontend UX**: Make the user interface more intuitive with additional feedback messages and error handling.
+- [x] **Enhance Frontend UX**: Make the user interface more intuitive with additional feedback messages and error handling.
 - [ ] **Add Multi-language Support**: Support additional languages to expand the app’s usability in different regions.
 - [ ] **Enable Cheque Metadata Analysis**: Add functionality to extract more metadata (e.g., signature, date) for detailed verification.
 - [ ] **Develop a Mobile App Version**: Build a cross-platform mobile app using React Native to make the service accessible on mobile devices.
