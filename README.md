@@ -17,28 +17,35 @@ ChequeCloud is a cloud-based web application designed to automate cheque process
 
 - **Frontend**:
   - **Languages**: React.js, Bootstrap
-  - **Key Features**: Responsive design, user-friendly cheque submission interface, real-time results display
+  - **Key Features**: Responsive design, user-friendly cheque submission, real-time results
+
 - **Backend**:
   - **Languages/Frameworks**: Python, AWS Lambda
   - **Key Features**: RESTful APIs, machine learning integration, fraud detection logic
+
 - **Database**:
   - **Type**: Amazon RDS (MySQL)
-  - **Purpose**: Stores cheque data, user information, and metadata for processing
+  - **Purpose**: Stores cheque data, user information, and metadata
+
 - **OCR Processing**:
   - **Service**: Amazon Textract
-  - **Function**: Extracts key information from cheque images for further processing
+  - **Function**: Extracts key information from cheque images
+
 - **Machine Learning**:
   - **Platform**: AWS SageMaker
-  - **Purpose**: Detects fraudulent cheques through trained machine learning models
-  - **Libraries**: TensorFlow, Scikit-learn for model training and deployment
+  - **Purpose**: Detects fraudulent cheques
+  - **Libraries**: TensorFlow, Scikit-learn
+
 - **Security**:
   - **Service**: AWS KMS (Key Management Service)
-  - **Purpose**: Ensures encryption and security of sensitive data during processing and storage
+  - **Purpose**: Data encryption and secure storage
+
 - **Monitoring**:
   - **Service**: Amazon CloudWatch
-  - **Purpose**: Tracks application metrics, monitors performance, and logs key events for troubleshooting and optimization.
+  - **Purpose**: Tracks performance, monitors logs, and optimizes system
+
 - **Hosting**:
-  - **Platform**: AWS Lambda, S3, and CloudWatch for performance monitoring and scalability
+  - **Platform**: AWS Lambda, S3, CloudWatch, and **Amazon EC2** for scalable compute resources
 
 ## Additional Features
 
