@@ -119,4 +119,21 @@ The architecture of ChequeCloud consists of several core components:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/ChequeCloud.git
+   git clone https://github.com/asif-mp3/ChequeCloud.git
+
+2. **Navigate into the project directory:**
+    ```bash
+    cd ChequeCloud
+    ```
+
+3. **Install backend dependencies:**
+    ```bash
+    npm install
+    ```
+
+4. **Install Python dependencies:**
+    - First, make sure you have Python set up.
+    - Then, install required libraries:
+    ```bash
+    pip install -r requirements.txt
+    ```
