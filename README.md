@@ -64,7 +64,7 @@ The architecture of ChequeCloud consists of several core components:
 5. **Security**: The entire system is secured using **AWS KMS** for encryption, ensuring all data is handled with industry-standard security protocols.
 6. **Monitoring**: **Amazon CloudWatch** logs and tracks performance to ensure the application runs smoothly and detects any issues in real-time.
 
-![Architecture Diagram](path/to/aws_arch.jpg)
+![Architecture Diagram](aws_arch.jpg)
 
 ## Working Mechanism
 
