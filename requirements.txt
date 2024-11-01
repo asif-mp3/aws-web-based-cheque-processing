@@ -1,0 +1,16 @@
+git+https://github.com/shivalikasingh95/transformers.git@image_utils_fix 
+datasets 
+sentencepiece 
+git+https://github.com/shivalikasingh95/zenml.git@label_studio_ocr_config
+pytorch-lightning
+zenml[server]
+mlflow
+label-studio
+label-studio-sdk
+pillow
+donut-python
+mysqlclient
+nltk
+word2number
+gradio
+symspellpy
