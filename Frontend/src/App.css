@@ -1,0 +1,19 @@
+.group-example-container {
+  padding-top: 0; /* Space above GroupExample */
+  background: linear-gradient(to bottom right, #bfecff,#ffccea); /* Gradient background */
+  padding-bottom: 20px; /* Add padding at the bottom */
+   /* Optional: Add rounded corners */
+}
+
+.features-title {
+  color: white; /* White text for visibility on background */
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.scanda{
+  padding-top: 50px;
+}
+
+  
+
